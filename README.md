@@ -6,7 +6,7 @@
 	* https://www.java.com/pt_BR/download/
 * Eclipse (Mars 2)
 	* http://www.eclipse.org/downloads/packages/release/Mars/2
-* É necessário instalar o Jboss Tools 4.3.1 Final no eclipse para dar suporte ao WildFly e também o Buildship Gradle integration 2.0.
+* É necessário instalar o Jboss Tools 4.3.1 Final para dar suporte ao WildFly e também o Buildship Gradle integration 2.0 (os dois se encontram no eclipse marketplace).
 * Baixar o Wildfly 10 e inserir como Server no Eclipse
 	* WildFly 10: http://download.jboss.org/wildfly/10.1.0.CR1/wildfly-10.1.0.CR1.zip
 * Instalar o Bower (requer o node.js, npm e git)
