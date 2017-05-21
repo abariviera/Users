@@ -1,4 +1,4 @@
-package application.dao;
+package application.mappers;
 
 import java.util.List;
 
