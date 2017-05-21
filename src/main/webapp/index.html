@@ -32,11 +32,11 @@
 		</form>
 
 		<div class='form-group'>
-			<table class='table table-bordered'>
+			<table class='table table-bordered table-striped'>
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>First name</th>
+						<th>Name</th>
 						<th>Surname</th>
 						<th>Username</th>
 						<th>Password</th>
@@ -56,10 +56,10 @@
 						<td>{{ user.email }}</td>
 						<td>{{ user.phone }}</td>
 						<td>{{ user.enabled ? 'Yes' : 'No' }}</td>
-						<td>{{ user.registerDate | date:'dd/MM/yyyy'}}</td>
+						<td>{{ user.registerDate | date:'dd/MM/yyyy hh:mm:ss a'}}</td>
 					</tr>
 					<tr ng-if="vm.data.length == 0 && vm.text">
-						<td class="text-center" colspan="9">Nenhum resultado encontrado para: <i>{{ vm.search }}</i> </td>
+						<td class="text-center" colspan="9"> No results found for: <i>{{ vm.search }}</i> </td>
 					</tr>
 				</tbody>
 			</table>

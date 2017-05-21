@@ -28,19 +28,4 @@ public class UserServiceImpl implements UserService {
 		
 		return this.userMapper.searchUser(filtro);
 	}
-
-	@Override
-	public int insert(User user) {
-		return this.userMapper.insert(user);
-	}
-	
-	@Override
-	public int delete(int id) {
-		return this.userMapper.delete(id);
-	}
-	
-	@Override
-	public int update(User user) {
-		return this.userMapper.update(user);
-	}
 }

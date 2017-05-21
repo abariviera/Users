@@ -14,5 +14,8 @@ CREATE TABLE `users` (
   UNIQUE KEY `idusers_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `users` (`id`,`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES (1,'abariviera','1234',1,'2017-05-21 03:16:53','Ana Caroline','Bariviera','ana.bariviera@gmail.com','(45)9922-2488');
-INSERT INTO `users` (`id`,`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES (2,'lguarezzi','1234',0,'2017-05-21 03:16:54','Luiz Ricardo','Guarezzi','lguarezzi@gmail.com','(48)9999-9999');
+INSERT INTO `users` (`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES ('abariviera','1234',1, NOW(),'Ana Caroline','Bariviera','ana.bariviera@gmail.com','(45)9922-2488');
+INSERT INTO `users` (`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES ('lguarezzi','1234',0, NOW(),'Luiz Ricardo','Guarezzi','lguarezzi@gmail.com','(48)9999-9999');
+INSERT INTO `users` (`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES ('smaria','1234',1,NOW(),'Maria','Souza','maria@gmail.com','(48)9999-9999');
+INSERT INTO `users` (`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES ('sjose','1234',0,NOW(),'José','Silva','jose@gmail.com','(48)9999-9999');
+INSERT INTO `users` (`username`,`password`,`is_enabled`,`register_date`,`name`,`surname`,`email`,`phone`) VALUES ('spaulo','1234',1,NOW(),'Paulo','Da Silva','paulo@gmail.com','(48)9999-9999');

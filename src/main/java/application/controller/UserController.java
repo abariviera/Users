@@ -27,19 +27,4 @@ public class UserController {
         List<User> searchUser = this.userService.searchUser(SQLUtils.prepareLikeValue(filtro));
 		return searchUser;
     }
-    
-    @RequestMapping(value="/delete", method = RequestMethod.DELETE)
-    public void delete(int id) {
-        this.userService.delete(id);
-    }
-    
-    @RequestMapping(value="/update", method = RequestMethod.PUT)
-    public void update(User user) {
-        this.userService.update(user);
-    }
-    
-    @RequestMapping(value="/insert", method = RequestMethod.POST)
-    public void insert(User user) {
-        this.userService.insert(user);
-    }
 }
