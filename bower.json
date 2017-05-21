@@ -1,0 +1,20 @@
+{
+  "name": "users",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Ana Caroline Bariviera"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+    "dependencies": {
+    "angular": "^1.6.3",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0",
+    "angular-ui-router": "ui-route#^0.4.2"
+  },
+  "resolutions": {
+    "angular": "^1.6.3"
+  }
+}

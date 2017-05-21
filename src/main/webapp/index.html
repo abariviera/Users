@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app='users'>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Users</title>
+
+	<link rel="stylesheet" href="static\lib\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="static\lib\font-awesome\css\font-awesome.min.css">
+    <script src="static\lib\jquery\dist\jquery.min.js"></script>
+    <script src="static\lib\bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="static\lib\angular\angular.min.js"></script>
+    <script src="static\lib\angular-ui-router\release\angular-ui-router.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/users/users.controller.js"></script>
+    <script src="app/users/users.service.js"></script>
+</head>
+<body ng-controller='UsersController as vm'>
+	<div class='col-md-8'>
+	<h3> Users </h3>
+	
+		<form ng-submit="vm.searchUser()">
+			<div class='form-group'>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search for..." ng-model="vm.text" ng-change="vm.isEmptyText()">
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="submit">
+							<i class="fa fa-fw" ng-class="{'fa-search':!vm.isSearching, 'fa-spinner fa-pulse':vm.isSearching}"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+
+		<div class='form-group'>
+			<table class='table table-bordered'>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>First name</th>
+						<th>Surname</th>
+						<th>Username</th>
+						<th>Password</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Enabled</th>
+						<th>Register date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat='user in vm.data'>
+						<td>{{ user.id }}</td>
+						<td>{{ user.name }}</td>
+						<td>{{ user.surname }}</td>
+						<td>{{ user.username }}</td>
+						<td>{{ user.password }}</td>
+						<td>{{ user.email }}</td>
+						<td>{{ user.phone }}</td>
+						<td>{{ user.enabled ? 'Yes' : 'No' }}</td>
+						<td>{{ user.registerDate | date:'dd/MM/yyyy'}}</td>
+					</tr>
+					<tr ng-if="vm.data.length == 0 && vm.text">
+						<td class="text-center" colspan="9">Nenhum resultado encontrado para: <i>{{ vm.search }}</i> </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</body>
+</html>
